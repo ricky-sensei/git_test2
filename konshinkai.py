@@ -2,17 +2,17 @@ times = int(input("何杯目ですか？: "))
 
 drinks = ["ビール", "ビール", "ビール", "レモンサワー", "レモンサワー"]
 
-times_to_key = times - 1
-final_drink = len(drinks)-1
+# ユーザーが入力した数字をインデックスに変換
+key = times - 1
 
-if times_to_key < 0 or times_to_key > final_drink:
+if key < 0 or key > len(drinks) - 1:
     print("範囲外です")
-elif times_to_key == 0:
-    print(drinks[times_to_key])
+elif key == 0:
+    print(drinks[key])
     print("乾杯")
-elif times_to_key == final_drink:
-    print(drinks[final_drink])
+elif key == len(drinks) - 1:
+    print(drinks[len(drinks) - 1])
     print("お疲れ様でした")
 else:
-    print(drinks[times_to_key])
+    print(drinks[key])
     print("おいしいなー")
